@@ -1,0 +1,66 @@
+<div class="home">
+  <div class="hero-section">
+    <div class="image-container">
+      <div class="text-overlay">
+        <h1 class="hero-heading text-primary"><span style="color: white;">Success</span> in every step</h1>
+        <button class="btn btn-primary">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="upcoming-events">
+  <div class="header">
+    <h2 >Upcoming events</h2>
+    <a class="explore-link" href="#">Explore all events</a>
+  </div>
+
+  <div class="event-slider">
+    <div class="event-slide">
+      <img src="../../../assets/Screenshot 2024-12-30 184814.png" alt="Event">
+      <div class="event-details">
+        <span class="event-type">IN-PERSON & VIRTUAL</span>
+        <h3>Making Memories, Singapore</h3>
+      </div>
+    </div>
+    <div class="event-slide">
+      <img src="../../../assets/Screenshot 2024-12-30 185520.png" alt="Event">
+      <div class="event-details">
+        <span class="event-type">IN-PERSON & VIRTUAL</span>
+        <h3>Making Memories, Norway</h3>
+      </div>
+    </div>
+    <!-- Add more event slides -->
+  </div>
+  
+  <!-- Slider Navigation -->
+  <button class="slider-nav prev" (click)="onPrevSlide()">&#8249;</button>
+<button class="slider-nav next" (click)="onNextSlide()">&#8250;</button>
+
+</div>
+
+
+<div class="available-courses">
+  <h2>Available Courses</h2>
+  <div class="courses-container">
+    <div class="course-card" *ngFor="let course of courses">
+      <img [src]="course.image" alt="{{ course.title }}" />
+      <div class="course-details">
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.instructor }}</p>
+        <p>
+          <span class="rating">{{ course.rating }}</span>
+          <span class="reviews">({{ course.reviews }} reviews)</span>
+        </p>
+        <p>
+          <span class="price">₹{{ course.price }}</span>
+          <span class="old-price">₹{{ course.oldPrice }}</span>
+        </p>
+        <button *ngIf="course.isBestSeller" class="bestseller">Bestseller</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+

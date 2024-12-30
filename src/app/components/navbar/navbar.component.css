@@ -1,0 +1,201 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar .containe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar .navbar-brand h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #000;
+}
+
+.navbar .navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  color: #000;
+}
+
+.navbar .navbar-toggler .toggler-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+}
+
+.navbar .navbar-menu {
+  display: flex;
+  align-items: center;
+  
+}
+
+.navbar .navbar-menu.navbar-collapse {
+  display: none; /* Hidden initially for mobile screens */
+}
+
+.navbar .navbar-menu .navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .navbar-menu .navbar-links .nav-item {
+  position: relative;
+}
+
+.navbar .navbar-menu .navbar-links .nav-item .nav-link {
+  text-decoration: none;
+  color: #000;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.navbar .navbar-menu .navbar-links .nav-item .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  color: #000;
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+}
+
+.navbar .navbar-menu .navbar-links .nav-item .dropdown-menu .dropdown-item {
+  padding: 0.5rem 1rem;
+}
+
+.navbar .navbar-menu .navbar-links .nav-item .dropdown-menu .dropdown-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar .navbar-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar .navbar-actions .btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar .navbar-actions .btn.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.navbar .navbar-actions .btn.btn-primary {
+  background: #007bff;
+  color: #fff;
+}
+
+/* MOBILE VIEW STYLES */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10; /* Keep navbar above other content */
+    padding: 1.7rem;
+  }
+
+  /* Navbar Brand (Heading) - Fixed to top-left */
+  .navbar .navbar-brand {
+    position: absolute;
+    top: 0.5rem; /* Adjust top spacing */
+    left: 1rem; /* Adjust left spacing */
+    z-index: 20; /* Ensure it stays on top */
+  }
+
+  .navbar .navbar-brand h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #000;
+  }
+
+  /* Navbar Toggler Button - Fixed to top-right */
+  .navbar .navbar-toggler {
+    position: absolute;
+    top: 0.5rem; /* Adjust top spacing */
+    right: 1rem; /* Adjust right spacing */
+    z-index: 20; /* Ensure it's above other elements */
+    background: none;
+    border: none;
+    display: block;
+    color: #000;
+  }
+
+  .navbar .navbar-toggler .toggler-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+  }
+
+  /* Navbar Menu */
+  .navbar .navbar-menu {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none; /* Hidden until toggled */
+    position: absolute; /* Overlay the home content */
+    top: 0; /* Start from the top of the navbar */
+    left: 0;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0; /* Remove any border radius for full-width overlay */
+    z-index: 15; /* Ensure it's above the home background */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+
+  .navbar .navbar-menu.navbar-collapse {
+    display: flex; /* Show menu when expanded */
+  }
+
+  /* Navbar Links */
+  .navbar-menu .navbar-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    color: #000;
+  }
+
+  .navbar-menu .navbar-links .nav-link {
+    display: block;
+    width: 100%;
+    text-align: left; /* Align links to the left */
+    padding: 0.75rem 1rem;
+  }
+
+  /* Dropdown Menu */
+  .navbar-menu .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: #333;
+    z-index: 10;
+    border-radius: 5px;
+  }
+
+  .navbar-menu .dropdown-menu .dropdown-item a {
+    color: #fff;
+  }
+}
