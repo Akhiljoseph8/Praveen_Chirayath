@@ -288,3 +288,14 @@
   font-size: 0.8em;
   cursor: pointer;
 }
+
+
+.section-light {
+  background-color: #f9f9f9; /* Light gray */
+  padding: 2rem 1rem;
+}
+
+.section-light-alt {
+  background-color: #fef8e6; /* Light beige */
+  padding: 2rem 1rem;
+}
