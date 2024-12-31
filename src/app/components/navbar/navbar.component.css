@@ -104,6 +104,16 @@
   color: #fff;
 }
 
+/* Fixed Navbar */
+.fixed-navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+
+/* Scroll Effect */
+
+
 /* MOBILE VIEW STYLES */
 @media (max-width: 768px) {
   .navbar {
@@ -113,7 +123,11 @@
     z-index: 10; /* Keep navbar above other content */
     padding: 1.7rem;
   }
-
+  .fixed-navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+  }
   /* Navbar Brand (Heading) - Fixed to top-left */
   .navbar .navbar-brand {
     position: absolute;
@@ -199,3 +213,5 @@
     color: #fff;
   }
 }
+
+
