@@ -78,7 +78,6 @@
   }
 
   .home .hero-section {
-   
     margin: 55px 15px 15px 15px
   }
 }
@@ -97,6 +96,9 @@
   .home .hero-section .btn-primary {
     font-size: 0.9rem; /* Further reduce button font size */
     padding: 0.5rem 1rem; /* Further reduce button padding */
+  }
+  .home .hero-section {
+    margin: 55px 15px 15px 15px
   }
 }
 
