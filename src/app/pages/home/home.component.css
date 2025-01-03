@@ -76,6 +76,11 @@
     font-size: 1rem; /* Reduce font size */
     padding: 0.6rem 1.5rem; /* Reduce button padding */
   }
+
+  .home .hero-section {
+   
+    margin: 55px 15px 15px 15px
+  }
 }
 
 @media (max-width: 576px) {
