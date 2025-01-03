@@ -10,7 +10,7 @@
 </div>
 
 
-<div class="upcoming-events section-light-alt">
+<div class="upcoming-events ">
   <div class="header">
     <h2 >Upcoming events</h2>
     <a class="explore-link" href="#">Explore all events</a>
@@ -41,18 +41,14 @@
 </div>
 
 
-<div class="available-courses ">
+<div class="available-courses section-light-alt">
   <h2>Available Courses</h2>
-  <div class="courses-container">
-    <div class="course-card" *ngFor="let course of courses">
+  <div class="courses-container" >
+    <div class="course-card" *ngFor="let course of courses" >
       <img [src]="course.image" alt="{{ course.title }}" />
-      <div class="course-details">
+      <div class="course-details" >
         <h3>{{ course.title }}</h3>
         <p>{{ course.instructor }}</p>
-        <p>
-          <span class="rating">{{ course.rating }}</span>
-          <span class="reviews">({{ course.reviews }} reviews)</span>
-        </p>
         <p>
           <span class="price">₹{{ course.price }}</span>
           <span class="old-price">₹{{ course.oldPrice }}</span>
@@ -64,3 +60,16 @@
   </div>
 </div>
 
+<section class="video-section">
+  <h2 class="section-title">Interviews</h2>
+  <div class="video-container">
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/JQm27yOpqBs?si=3S4tu_Eq66AUJF9R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/v0rBIYDKnx8?si=jK4ZIdpCKIm5G6Ny" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Add more videos as needed -->
+  </div>
+</section>

@@ -1,17 +1,17 @@
 .home .hero-section {
-  background-image: url('../../../assets/Screenshot 2024-12-30 122627.png');
+  background-image: url('../../../assets/home_background.png');
   background-size: cover;
   background-position: center;
   text-align: center;
   padding: 4rem 1rem;
   flex-grow: 1;
-  height: calc(100vh - 30px); /* Adjust 80px to the actual navbar height */
+  height: calc(100vh - 86px); /* Adjust 80px to the actual navbar height */
   display: flex;
   justify-content: center;
   border-radius: 10px; /* Change this value for desired rounding */
   align-items: center;
   flex-direction: column; /* Align elements vertically */
-  margin: 0px 25px 25px 25px
+  margin: 64px 25px 25px 25px
 }
 
 .home .hero-section h1 {
@@ -19,9 +19,9 @@
   font-weight: bold;
   font-size: 3.5rem;
   opacity: 5;
-  color: #007bff;
+  color: #fff;
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.3);
+  /* background-color: rgba(255, 255, 255, 0.3); */
   animation: fadeIn 1s ease-out; /* Add a fade-in animation */
 }
 
@@ -48,10 +48,11 @@
 .home .hero-section .btn-primary {
   padding: 0.8rem 2rem; /* Increase button padding */
   font-size: 1.2rem;
-  background-color: #007bff;
-  color: white;
+  /* background-color: #007bff; */
+  /* color: white; */
+  margin-left: 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -61,10 +62,7 @@
 }
 
 @media (max-width: 768px) {
-  .home .hero-section {
-    padding: 2rem 1rem; /* Reduce padding */
-    margin: 0px 15px 15px 15px; /* Adjust margin */
-  }
+  
 
   .home .hero-section h1 {
     font-size: 2.5rem; /* Reduce heading size */
@@ -135,8 +133,8 @@
 }
 
 .event-slide {
-  min-width: 80%;
-  height: 500px;
+  min-width: 70%;
+  height: 600px;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
@@ -201,7 +199,17 @@
 .slider-nav:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+@media (max-width: 768px) {
+  .event-slide {
+    min-width: 90%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+   
+  }
 
+}
 
 
 /* courses */
@@ -209,8 +217,8 @@
 
 .available-courses {
   padding: 20px;
-  max-width: 1200px; /* Maximum width for content */
   margin: 0 auto; /* Centers the section horizontally */
+ 
 }
 
 .available-courses h2 {
@@ -221,9 +229,11 @@
 }
 
 .courses-container {
+  max-width: 1200px; /* Maximum width for content */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Makes the cards responsive */
   gap: 20px; /* Spacing between cards */
+  margin: 0 auto; /* Centers the section horizontally */
   justify-content: center; /* Centers cards if fewer fit in a row */
 }
 
@@ -233,11 +243,18 @@
   overflow: hidden;
   background-color: #fff;
   transition: transform 0.2s;
-  height: 450px;
+  height: 420px;
 }
 
 .course-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
+}
+.course-details {
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 10px;
+  text-align: center; /* Center-align text */
 }
 
 .course-card img {
@@ -251,13 +268,14 @@
 }
 
 .course-details h3 {
-  font-size: 1.1em;
+  font-size: 1.4rem;
   margin: 5px 0;
+  color: #0056b3;
 }
 
 .course-details p {
   margin: 5px 0;
-  font-size: 0.9em;
+  font-size: 1rem;
 }
 
 .rating {
@@ -285,7 +303,7 @@
   border: none;
   border-radius: 4px;
   padding: 5px 10px;
-  font-size: 0.8em;
+  font-size: 1.1rem;
   cursor: pointer;
 }
 
@@ -296,6 +314,43 @@
 }
 
 .section-light-alt {
-  background-color: #fef8e6; /* Light beige */
+  background-color: rgb(233, 239, 249);
   padding: 2rem 1rem;
+}
+
+
+.video-section {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Optional: Limit the maximum size */
+  aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }

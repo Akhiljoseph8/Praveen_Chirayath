@@ -26,7 +26,6 @@ export class NavbarComponent {
     },
     {
       name: 'Courses',
-      dropdown: ['All Programs', 'Sponken English', 'IELTS','Employability skill'],
       showDropdown: false,
     },
     {
